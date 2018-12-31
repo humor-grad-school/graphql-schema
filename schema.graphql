@@ -1,0 +1,51 @@
+scalar Date
+
+type User {
+  id: Int!
+  username: String!
+  createAt: String!
+  posts: [Post]
+}
+
+type Post {
+  id: Int!
+  title: String!
+  contentS3Key: String!
+  writer: User!
+  board: Board!
+  likes: Int!
+  comments: [Comment]!
+
+  createAt: Date!
+  updateAt: Date!
+}
+
+type Comment {
+  id: Int!
+  writer: User!
+  post: Post!
+  parentComment: Comment!
+  contentS3Key: String!
+  likes: Int!
+
+  createAt: Date!
+  updateAt: Date!
+}
+
+type Board {
+  id: Int!
+  name: String!
+  posts: [Post]!
+
+  createAt: Date!
+  updateAt: Date!
+}
+
+type Query {
+  user(id: Int!): User
+  board(name: String!, page: Number): Board
+}
+
+schema {
+  query: Query
+}
