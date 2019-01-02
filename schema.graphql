@@ -3,8 +3,8 @@ scalar Date
 type User {
   id: Int!
   username: String!
-  createAt: String!
-  posts: [Post]
+  createdAt: Date!
+  posts: [Post]!
 }
 
 type Post {
@@ -44,7 +44,8 @@ type Board {
 
 type Query {
   user(id: Int!): User
-  board(name: String!, page: Number): Board
+  board(name: String!): Board
+  boards: [Board]!
 }
 
 schema {
