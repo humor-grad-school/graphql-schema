@@ -15,9 +15,10 @@ type Post {
   board: Board!
   likes: Int!
   comments: [Comment]!
+  isLiked: Boolean!
 
-  createAt: Date!
-  updateAt: Date!
+  createdAt: Date!
+  updatedAt: Date!
 }
 
 type Comment {
@@ -28,8 +29,8 @@ type Comment {
   contentS3Key: String!
   likes: Int!
 
-  createAt: Date!
-  updateAt: Date!
+  createdAt: Date!
+  updatedAt: Date!
 }
 
 type Board {
@@ -37,8 +38,8 @@ type Board {
   name: String!
   posts: [Post]!
 
-  createAt: Date!
-  updateAt: Date!
+  createdAt: Date!
+  updatedAt: Date!
 }
 
 type Query {
