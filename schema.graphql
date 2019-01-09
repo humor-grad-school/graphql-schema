@@ -16,6 +16,7 @@ type Post {
   likes: Int!
   comments: [Comment]!
   isLiked: Boolean!
+  isViewed: Boolean!
 
   createdAt: Date!
   updatedAt: Date!
