@@ -16,6 +16,7 @@ type Post {
   board: Board!
   likes: Int!
   comments: [Comment]!
+  commentCount: Int!
   isLiked: Boolean!
   isViewed: Boolean!
   thumbnailUrl: String!
