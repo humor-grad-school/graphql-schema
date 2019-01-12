@@ -5,7 +5,7 @@ type User {
   username: String!
   createdAt: Date!
   posts: [Post]!
-  pictureUrl: String!
+  avatarUrl: String!
 }
 
 type Post {
@@ -47,6 +47,7 @@ type Board {
 
 type Query {
   user(id: Int!): User
+  me: User
   board(name: String!): Board
   boards: [Board]!
 }
