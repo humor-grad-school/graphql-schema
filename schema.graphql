@@ -5,6 +5,7 @@ type User {
   username: String!
   createdAt: Date!
   posts: [Post]!
+  pictureUrl: String!
 }
 
 type Post {
@@ -17,6 +18,7 @@ type Post {
   comments: [Comment]!
   isLiked: Boolean!
   isViewed: Boolean!
+  thumbnailUrl: String!
 
   createdAt: Date!
   updatedAt: Date!
