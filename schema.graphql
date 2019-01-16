@@ -19,6 +19,7 @@ type Post {
   commentCount: Int!
   isLiked: Boolean!
   isViewed: Boolean!
+  views: Int!
   thumbnailUrl: String!
 
   createdAt: Date!
