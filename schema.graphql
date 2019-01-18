@@ -52,6 +52,7 @@ type Query {
   me: User
   board(name: String!): Board
   boards: [Board]!
+  bestPosts: [Post]!
 }
 
 schema {
