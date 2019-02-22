@@ -53,6 +53,7 @@ type Query {
   board(name: String!): Board
   boards: [Board]!
   bestPosts: [Post]!
+  post(postId: Int!): Post
 }
 
 schema {
