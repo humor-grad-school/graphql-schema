@@ -41,8 +41,7 @@ type Comment {
 type Board {
   id: Int!
   name: String!
-  posts: [Post]!
-
+  posts(page: Int!, pageSize: Int!): [Post]!
   createdAt: Date!
   updatedAt: Date!
 }
