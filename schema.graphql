@@ -30,7 +30,7 @@ type Comment {
   id: Int!
   writer: User!
   post: Post!
-  parentComment: Comment!
+  parentComment: Comment
   contentS3Key: String!
   likes: Int!
 
